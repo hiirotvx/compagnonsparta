@@ -10,11 +10,9 @@ import org.bukkit.entity.Player;
 import me.astero.companions.CompanionsPlugin;
 import me.astero.companions.companiondata.PlayerCache;
 import me.astero.companions.companiondata.PlayerData;
-import me.astero.companions.gui.MainMenu;
 import me.astero.companions.util.MessageUtil;
 import me.astero.companions.gui.OwnedMenu;
 import me.astero.companions.gui.PlayerDetailsMenu;
-import me.astero.companions.gui.ShopMenu;
 import me.astero.companions.gui.UpgradeMenu;
 
 public class CompanionCommand implements CommandExecutor {
@@ -37,7 +35,8 @@ public class CompanionCommand implements CommandExecutor {
 
 			if(args.length < 1)
 			{
-				new MainMenu(main, player);
+				PlayerData.instanceOf(player).setPageNumber(1);
+				new OwnedMenu(main, player, true);
 			}
 			else if(args.length > 1)
 			{
@@ -172,11 +171,6 @@ public class CompanionCommand implements CommandExecutor {
 			{
 				PlayerData.instanceOf(player).setPageNumber(1); // Set the first page before entering
 				new OwnedMenu(main, player, true);
-			}
-			else if(args[0].equalsIgnoreCase("shop"))
-			{
-				PlayerData.instanceOf(player).setPageNumber(1);
-				new ShopMenu(main, player);
 			}
 			else if(args[0].equalsIgnoreCase("upgrade"))
 			{

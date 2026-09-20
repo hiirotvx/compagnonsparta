@@ -187,31 +187,31 @@ GUI:
         maxedName: "<gold><b>ABILITY MAXED OUT</b>"
         name: "<gold><b>UPGRADE ABILITY LEVEL</b>"
         slot: 3
-        price: 10000
+        price: 100000
         description:
           - " "
           - "<gold><b>LEFT CLICK </b><gray>to upgrade your ability level!"
           - "<gold><b>RIGHT CLICK </b><gray> to lower your ability level!"
           - " "
-          - "<gold>PRICE: <yellow>$10,000"    
+          - "<gold>PRICE: <yellow>$100,000"    
         maxedDescription:   
           - " "
           - "<gray>You can no longer upgrade your active companion"   
           - ""
           - "<gold><b>RIGHT CLICK</b><gray> to lower your ability level!"
           - " "
-          - "<gold>PRICE: <yellow>$10,000"              
+          - "<gold>PRICE: <yellow>$100,000"              
       renameCompanion:
         type: NAME_TAG
         amount: 1
         name: "<gold><b>RENAME COMPANION</b>"
         slot: 4
-        price: 1C
+        price: 25000
         description:
           - " "
           - "<gold><b>LEFT CLICK </b><gray>to rename your companion!"
           - " "
-          - "<gold>PRICE: <yellow>1 COMPANION COIN"         
+          - "<gold>PRICE: <yellow>$25,000"         
       hideCompanionName:
         type: MAP
         amount: 1

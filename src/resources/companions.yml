@@ -229,7 +229,7 @@ companions:
         type: COMPANION_SKULL
         amount: 1
         name: "<gold><b>FROG (SKIN)</b>"
-        price: 5C
+        price: 5000
         description:
           - " "
           - "<gray>*croaks*"

@@ -15,7 +15,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import lombok.Getter;
 import me.astero.companions.api.PlaceholderAPI;
 import me.astero.companions.command.ClearCompanionDataCommand;
-import me.astero.companions.command.CompanionCoinCommand;
 import me.astero.companions.command.CompanionCommand;
 import me.astero.companions.command.ForceCompanionActiveCommand;
 import me.astero.companions.command.ForceCompanionDeactiveCommand;
@@ -41,10 +40,8 @@ import me.astero.companions.listener.VehicleListener;
 import me.astero.companions.listener.companions.CompanionCache;
 import me.astero.companions.listener.companions.CompanionFollow;
 import me.astero.companions.listener.companions.CompanionInteraction;
-import me.astero.companions.listener.menu.MainMenuListener;
 import me.astero.companions.listener.menu.OwnedMenuListener;
 import me.astero.companions.listener.menu.PlayerDetailsMenuListener;
-import me.astero.companions.listener.menu.ShopMenuListener;
 import me.astero.companions.listener.menu.UpgradeMenuListener;
 import me.astero.companions.util.CompanionUtil;
 import me.astero.companions.util.FormatNumbers;
@@ -104,8 +101,6 @@ public class CompanionsPlugin extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new CompanionFollow(this), this);
 		Bukkit.getPluginManager().registerEvents(new CompanionCache(this), this);
 		Bukkit.getPluginManager().registerEvents(new OwnedMenuListener(this), this);
-		Bukkit.getPluginManager().registerEvents(new ShopMenuListener(this), this);
-		Bukkit.getPluginManager().registerEvents(new MainMenuListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new UpgradeMenuListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);
 		Bukkit.getPluginManager().registerEvents(new ChatListener(this), this);
@@ -127,7 +122,6 @@ public class CompanionsPlugin extends JavaPlugin {
 		getCommand("forceactive").setExecutor(new ForceCompanionActiveCommand(this));
 		getCommand("tradecompanion").setExecutor(new TradeCompanionCommand(this));
 		getCommand("forcedeactive").setExecutor(new ForceCompanionDeactiveCommand(this));
-		getCommand("companioncoin").setExecutor(new CompanionCoinCommand(this));
 		
 		getLogger().info(ChatColor.GOLD + ">" + ChatColor.GRAY + " Commands are loaded up!");
 		

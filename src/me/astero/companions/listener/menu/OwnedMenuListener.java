@@ -47,7 +47,7 @@ public class OwnedMenuListener implements Listener {
 
 						if(PlayerData.instanceOf(player).getPageNumber() == 0)
 						{
-							Bukkit.dispatchCommand(player, main.getFileHandler().getOwnedGoBackCommand());
+							player.closeInventory();
 						}
 						else
 						{

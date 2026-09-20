@@ -30,6 +30,3 @@ commands:
     description: trades the specified Companion to the specified player.
   forcedeactive:
     description: forces the specified player's active Companion to be removed.
-  companioncoin:
-    aliases: [ccoin, cc]
-    description: manage/view companion coins.
