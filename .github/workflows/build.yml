@@ -20,14 +20,21 @@ jobs:
           java-version: '21'
           cache: maven
 
-      - name: Construire MSLands et l'installer en local
+      - name: Attendre que JitPack publie MSLands 1.1.1
         run: |
-          set -e
-          git clone --quiet https://github.com/IbanEtchep/MSLands.git /tmp/mslands
-          cd /tmp/mslands
-          git checkout --quiet a3f18bd96e399376614a62dee5e0cb59ddf490c7
-          chmod +x gradlew
-          ./gradlew publishToMavenLocal --no-daemon --quiet
+          set -u
+          URL="https://jitpack.io/com/github/IbanEtchep/MSLands/1.1.1/MSLands-1.1.1.pom"
+          for i in $(seq 1 25); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "$URL" || echo 000)
+            echo "tentative $i : HTTP $code"
+            if [ "$code" = "200" ]; then
+              echo "MSLands 1.1.1 disponible"
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "JitPack n'a pas publie MSLands 1.1.1 dans le temps imparti"
+          exit 1
 
       - name: Aligner la version de paper-api
         run: python3 .github/scripts/pick_paper_version.py
