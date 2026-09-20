@@ -71,178 +71,166 @@ items:
     soundOnUse: BLOCK_BEACON_POWER_SELECT
     
 GUI:
+  # Charte : bronze patine et ivoire. Chaque ligne commence par <!italic>
+  # pour neutraliser l'italique que Minecraft applique par defaut aux lores.
+
   goBack:
-    type: BARRIER
+    type: SPECTRAL_ARROW
     amount: 1
-    name: "<gold><b>PREVIOUS PAGE</b>"
+    name: "<!italic><gradient:#8c6239:#d9a441><b>Page precedente</b></gradient>"
     slot: 45
     description:
-      - " "
-      - "<gold><b>LEFT CLICK </b><gray>to go back to the previous page."    
+      - "<!italic> "
+      - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour revenir en arriere"
+
   nextPage:
     type: ARROW
     amount: 1
-    name: "<gold><b>NEXT PAGE</b>"
+    name: "<!italic><gradient:#8c6239:#d9a441><b>Page suivante</b></gradient>"
     slot: 53
     description:
-      - " "
-      - "<gold><b>LEFT CLICK </b><gray>to go back to the next page."  
+      - "<!italic> "
+      - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour avancer"
+
+  # --- INUTILISE : le menu d'accueil a ete supprime. Les cles restent car le
+  # --- plugin les lit au demarrage ; les retirer provoquerait une erreur.
   open-companions:
-    title: "<gold><b>COMPANIONS</b>"
+    title: "<!italic><gradient:#8c6239:#e8d5b0><b>Compagnons</b></gradient>"
     size: 9
-    openSound: BLOCK_BEACON_ACTIVATE
-    
+    openSound: BLOCK_AMETHYST_BLOCK_CHIME
     items:
       companion-shop:
         type: PUFFERFISH_SPAWN_EGG
         amount: 1
-        name: '<gold>PURCHASE COMPANIONS'
+        name: "<!italic><#6b6355>Inutilise"
         slot: 0
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to view a list of companions"
-          - "<gray>that you can purchase!"
+          - "<!italic> "
       owned-companions:
         type: CHEST
         amount: 1
-        name: '<gold>OWNED COMPANIONS'
+        name: "<!italic><#6b6355>Inutilise"
         slot: 4
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to view a list of companions"
-          - "<gray>that you own!"   
+          - "<!italic> "
       upgrade-abilities:
         type: PAPER
         amount: 1
-        name: '<gold>UPGRADE ABILITIES'
+        name: "<!italic><#6b6355>Inutilise"
         slot: 8
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to view a list of upgrades"
-          - "<gray>that you can do on your companion!"                   
-          
+          - "<!italic> "
 
+  # --- INUTILISE : la boutique a ete supprimee. Cles conservees, meme raison.
   open-companions-shop:
-    title: "<gold><b>COMPANIONS SHOP</b>"
+    title: "<!italic><#6b6355>Inutilise"
     size: 54
-    openSound: BLOCK_BEACON_ACTIVATE     
-    
-    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
-    goBackCommand: "companions"      
-        
+    openSound: BLOCK_AMETHYST_BLOCK_CHIME
+    goBackCommand: "companions"
+
   owned-companions:
-    title: "<gold><b>OWNED COMPANIONS</b>"
+    title: "<!italic><gradient:#8c6239:#e8d5b0><b>Vos compagnons</b></gradient>"
     size: 54
-    openSound: BLOCK_BEACON_ACTIVATE    
-    
-    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
-    goBackCommand: "companions"  
-    
+    openSound: BLOCK_AMETHYST_BLOCK_CHIME
+    goBackCommand: "companions"
     items:
       companionDetails:
-        type: PAPER
+        type: SOUL_LANTERN
         amount: 1
-        name: "<gold><b>COMPANION DETAILS</b>"
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Compagnon actif</b></gradient>"
         slot: 0
         description:
-          - " "
-          - "<gold>ACTIVE COMPANION: <yellow>%active_companion%"
-          - "<gold>COMPANION COINS: <yellow>%companions_coins%"
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to remove your active companion."   
+          - "<!italic> "
+          - "<!italic><#a89f91>Actuellement a vos cotes :"
+          - "<!italic><#e8d5b0>  %active_companion%"
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#b5563f>\u276f <#a89f91>Clic gauche <#6b6355>pour le renvoyer"
+
   upgrade-abilities:
-    title: "<gold><b>UPGRADING..</b>"
+    title: "<!italic><gradient:#8c6239:#e8d5b0><b>Atelier</b></gradient>"
     size: 9
-    openSound: BLOCK_BEACON_ACTIVATE  
-    
-    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
-    goBackCommand: "companions"    
-    
+    openSound: BLOCK_AMETHYST_BLOCK_CHIME
+    goBackCommand: "companions"
     items:
       upgradeDetails:
-        type: PAPER
+        type: BOOK
         amount: 1
-        name: "<gold><b>UPGRADE DETAILS</b>"
-        slot: 1
-        description:
-          - " "
-          - "<gold>You are currently upgrading <yellow>%active_companion%"    
-          - " "
-          - "<gold><b>DETAILS</b>"
-          - "<yellow>NAME: <gold>%companion_name%"               
-          - "<yellow>LEVEL: <gold>%companion_level%"     
-          - ""
-          - "<gray>(You can only upgrade your active companion!)"
-      goBack:
-        type: BARRIER
-        amount: 1
-        name: "<gold><b>PREVIOUS PAGE</b>"
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Fiche du compagnon</b></gradient>"
         slot: 0
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to go back to the previous page."          
+          - "<!italic> "
+          - "<!italic><#a89f91>Compagnon <#e8d5b0>%active_companion%"
+          - "<!italic><#a89f91>Nom      <#e8d5b0>%companion_name%"
+          - "<!italic><#a89f91>Niveau   <#e8d5b0>%companion_level%"
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#6b6355>Seul le compagnon actif peut etre modifie."
       abilityLevel:
         type: EXPERIENCE_BOTTLE
         amount: 1
-        maxedName: "<gold><b>ABILITY MAXED OUT</b>"
-        name: "<gold><b>UPGRADE ABILITY LEVEL</b>"
-        slot: 3
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Niveau de capacite</b></gradient>"
+        maxedName: "<!italic><#8fb26a><b>Capacite au maximum</b>"
+        slot: 2
         price: 100000
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to upgrade your ability level!"
-          - "<gold><b>RIGHT CLICK </b><gray> to lower your ability level!"
-          - " "
-          - "<gold>PRICE: <yellow>$100,000"    
-        maxedDescription:   
-          - " "
-          - "<gray>You can no longer upgrade your active companion"   
-          - ""
-          - "<gold><b>RIGHT CLICK</b><gray> to lower your ability level!"
-          - " "
-          - "<gold>PRICE: <yellow>$100,000"              
+          - "<!italic> "
+          - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>monter d'un niveau"
+          - "<!italic><#b5563f>\u276f <#a89f91>Clic droit <#6b6355>redescendre d'un niveau"
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#a89f91>Cout <#e8d5b0>100 000 <#6b6355>par niveau"
+        maxedDescription:
+          - "<!italic> "
+          - "<!italic><#8fb26a>Ce compagnon ne peut plus progresser."
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#b5563f>\u276f <#a89f91>Clic droit <#6b6355>redescendre d'un niveau"
       renameCompanion:
         type: NAME_TAG
         amount: 1
-        name: "<gold><b>RENAME COMPANION</b>"
-        slot: 4
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Renommer</b></gradient>"
+        slot: 3
         price: 25000
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to rename your companion!"
-          - " "
-          - "<gold>PRICE: <yellow>$25,000"         
+          - "<!italic> "
+          - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour choisir un nom"
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#a89f91>Cout <#e8d5b0>25 000"
       hideCompanionName:
-        type: MAP
+        type: GRAY_DYE
         amount: 1
-        name: "<gold><b>HIDE COMPANION'S NAME</b>"
-        slot: 5
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Masquer le nom</b></gradient>"
+        slot: 4
         price: 2000
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to hide your companion's name!"
-          - " "
-          - "<gray>(If already bought, this perk reshows the companion name)"
-          - "<gold>PRICE: <yellow>$2,000"      
+          - "<!italic> "
+          - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour basculer l'affichage"
+          - "<!italic><#6b6355>Un second clic reaffiche le nom."
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#a89f91>Cout <#e8d5b0>2 000"
       changeWeapon:
-        type: DIAMOND_SWORD
+        type: IRON_SWORD
         amount: 1
-        name: "<gold><b>CHANGE COMPANION'S WEAPON</b>"
-        slot: 6
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Changer l'arme</b></gradient>"
+        slot: 5
         price: 6000
         description:
-          - " "
-          - "<gold><b>LEFT CLICK </b><gray>to change your companion's weapon!"
-          - " "
-          - "<gold>PRICE: <yellow>$6,000"
+          - "<!italic> "
+          - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour equiper une autre arme"
+          - "<!italic><#5a4a38>\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501"
+          - "<!italic><#a89f91>Cout <#e8d5b0>6 000"
+      goBack:
+        type: SPECTRAL_ARROW
+        amount: 1
+        name: "<!italic><gradient:#8c6239:#d9a441><b>Retour</b></gradient>"
+        slot: 8
+        description:
+          - "<!italic> "
+          - "<!italic><#d9a441>\u276f <#a89f91>Clic gauche <#6b6355>pour revenir"
+
   player-details:
-    title: "<gold><b>VIEWING </b><yellow>%target%'S<gold><b> DETAILS..</b>"
-    openSound: BLOCK_BEACON_ACTIVATE    
+    title: "<!italic><gradient:#8c6239:#e8d5b0><b>%target%</b></gradient>"
+    openSound: BLOCK_AMETHYST_BLOCK_CHIME
     items:
       companionDetails:
         description:
-          - " "
-          - "<gold>ACTIVE COMPANION: <yellow>%active_companion%"  
-          - "<gold>COMPANION COINS: <yellow>%companions_coins%"
-       
-    
+          - "<!italic> "
+          - "<!italic><#a89f91>Compagnon actif"
+          - "<!italic><#e8d5b0>  %active_companion%"
