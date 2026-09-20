@@ -137,6 +137,12 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
+
+		<!-- FoliaLib, tire par MSLands -->
+		<repository>
+			<id>tcoded-repo</id>
+			<url>https://repo.tcoded.com/releases</url>
+		</repository>
 	</repositories>
 
 </project>
