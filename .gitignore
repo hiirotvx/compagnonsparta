@@ -1,0 +1,30 @@
+# Build output
+/target/
+dependency-reduced-pom.xml
+
+# IDE project files
+/.idea/
+*.iml
+/.settings/
+/.classpath
+/.project
+*.code-workspace
+
+# Local tooling and scripts not required for the plugin jar
+/bin/
+/updatedevserver/
+
+# OS clutter
+*.DS_Store
+Thumbs.db
+
+# Logs & runtime data
+*.log
+/logs/
+
+# Misc temporary files
+*.bak
+*.tmp
+# Local server configs & exports
+/config-sparta/
+*.zip
