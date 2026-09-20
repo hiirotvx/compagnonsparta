@@ -181,7 +181,13 @@ public class CompanionCommand implements CommandExecutor {
 				if(player.hasPermission("companions.admin.reload"))
 				{
 					main.getFileManager().reloadConfigs();
-					
+
+					// Les compagnons disponibles ont pu changer : on realigne les caches en ligne.
+					for(Player online : Bukkit.getOnlinePlayers())
+					{
+						main.getCompanionAccess().sync(online);
+					}
+
 					MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(), main.getFileHandler().getReloadMessage());
 				}
 				else

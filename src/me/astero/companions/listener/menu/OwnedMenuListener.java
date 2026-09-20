@@ -11,6 +11,7 @@ import me.astero.companions.CompanionsPlugin;
 import me.astero.companions.companiondata.PlayerCache;
 import me.astero.companions.companiondata.PlayerData;
 import me.astero.companions.gui.OwnedMenu;
+import me.astero.companions.gui.UpgradeMenu;
 import me.astero.companions.util.MessageUtil;
 
 public class OwnedMenuListener implements Listener {
@@ -80,6 +81,23 @@ public class OwnedMenuListener implements Listener {
 					{
 						if(MessageUtil.parse(main.getFileHandler().getCompanionDetails().get(getCompanionName).getItemName()).equals(currentName))
 						{
+								if(e.isRightClick())
+								{
+									// Clic droit : editer. L'edition s'applique au compagnon actif uniquement.
+									if(getCompanionName.equalsIgnoreCase(PlayerData.instanceOf(player).getActiveCompanionName()))
+									{
+										new UpgradeMenu(main, player);
+									}
+									else
+									{
+										MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(),
+												main.getFileHandler().getMustActivateToEditMessage());
+										player.closeInventory();
+									}
+
+									return;
+								}
+
 								if(PlayerData.instanceOf(player).isToggled())
 								{
 									PlayerData.instanceOf(player).setToggled(false);

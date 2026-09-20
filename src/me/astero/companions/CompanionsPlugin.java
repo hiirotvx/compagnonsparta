@@ -124,6 +124,17 @@ public class CompanionsPlugin extends JavaPlugin {
 		getCommand("forcedeactive").setExecutor(new ForceCompanionDeactiveCommand(this));
 		
 		getLogger().info(ChatColor.GOLD + ">" + ChatColor.GRAY + " Commands are loaded up!");
+
+		// Le cache est normalement rempli a la connexion. Si le plugin est (re)charge
+		// alors que des joueurs sont deja en ligne, PlayerJoinEvent ne se declenche pas
+		// pour eux : on les resynchronise ici, une fois les caches disponibles.
+		Bukkit.getScheduler().runTaskLater(this, () -> {
+			for(org.bukkit.entity.Player online : Bukkit.getOnlinePlayers())
+			{
+				companionAccess.sync(online);
+			}
+		}, 20L);
+
 		
 		getLogger().info(ChatColor.GOLD + "              >--------------------------<");
 		getLogger().info(ChatColor.GOLD + "              A total of " + ChatColor.YELLOW + this.getFileHandler().getCompanionDetails().size() + ChatColor.GOLD + " Companions have");

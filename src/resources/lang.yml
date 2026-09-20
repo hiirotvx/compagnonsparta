@@ -19,6 +19,7 @@ messages:
   companionRemovedFromPlayer: "<red>Your <gold>%companion% <red>Companion has been removed!"
   companionSetForPlayer: "<gray>Your active companion has been changed into the <gold>%companion%<gray> Companion."
   noActiveCompanion: "<red>Error! <gray>You do not have an active companion!"
+  mustActivateToEdit: "<red>Attention ! <gray>Vous devez activer ce compagnon pour l'ameliorer. <gray>(clic gauche)"
   hideCompanion: "<gray>You have successfully toggled your Companion's name for <yellow>$%price%<gray>."
   inRenaming: "\n<gold><b>Enter a new name!</b>\n <yellow>MiniMessage tags are supported! (e.g. \\<gold>Name)\n\n<dark_red><b>></b> <red>Type 'cancel' to cancel."
   inChangingWeapon: "\n<gold><b>Enter a new weapon!\n</b><yellow> Weapon names are <red><b>NOT </b><yellow>caPs SenSitive!\n<dark_red><b>> </b><red>Type 'cancel' to cancel changing weapons."

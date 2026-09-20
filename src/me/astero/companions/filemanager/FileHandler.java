@@ -42,7 +42,7 @@ public class FileHandler {
 	@Getter private String notPlayerMessage, notEnoughMoneyMessage, itemBoughtMessage, abilityBoughtMessage, 
 	noPermissionMessage, noUpgradeBuyPermissionMessage, removeCompanionMessage, reloadMessage, companionNotFoundMessage,
 	weaponNotFoundMessage, companionGivenMessage, companionReceivedMessage, companionRemovedMessage, companionRemovedFromPlayerMessage, companionSetMessage,
-	companionSetForPlayerMessage, noActiveCompanionMessage, inRenamingMessage, inChangingWeaponMessage, renamedCompanionMessage, actionSuccessMessage, 
+	companionSetForPlayerMessage, noActiveCompanionMessage, mustActivateToEditMessage, inRenamingMessage, inChangingWeaponMessage, renamedCompanionMessage, actionSuccessMessage, 
 	changedCompanionWeaponMessage, hideCompanionMessage, abilityCoolDownMessage, invalidUsageMessage, invalidGiveUsageMessage, invalidRemoveUsageMessage,
 	companionAlreadyOwnedMessage, companionNotOwnedMessage, toggledBackMessage, toggledAwayMessage, playerInDisabledWorldMessage, playerInVanishMessage, playerNotInVanishMessage,
 	playerNotFoundMessage, playerNotOnlineMessage, itemGivenMessage, itemReceivedMessage, invalidUpgradeArgumentMessage, forceActiveSuccessfulMessage, forceActiveNotSuccessfulMessage,
@@ -197,6 +197,7 @@ public class FileHandler {
 		companionSetMessage = main.getFileManager().getMessagesData().getString("messages.companionSet");
 		companionSetForPlayerMessage = main.getFileManager().getMessagesData().getString("messages.companionSetForPlayer");
 		noActiveCompanionMessage = main.getFileManager().getMessagesData().getString("messages.noActiveCompanion");
+		mustActivateToEditMessage = main.getFileManager().getMessagesData().getString("messages.mustActivateToEdit");
 		inRenamingMessage = main.getFileManager().getMessagesData().getString("messages.inRenaming");
 		inChangingWeaponMessage = main.getFileManager().getMessagesData().getString("messages.inChangingWeapon");
 		renamedCompanionMessage = main.getFileManager().getMessagesData().getString("messages.renamedCompanion");
