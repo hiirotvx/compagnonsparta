@@ -59,11 +59,28 @@ public class ClaimFlyListener implements Listener {
 			return true;
 		}
 
+		return canFlyIn(player, LandsPlugin.getInstance().getLandRepository().getLandAt(player.getLocation()));
+	}
+
+	/**
+	 * Le joueur peut-il voler dans ce claim precis (null = hors de tout claim) ?
+	 *
+	 * A utiliser pendant un deplacement : MSLands declenche PlayerLandEnterEvent pendant
+	 * le PlayerMoveEvent, quand player.getLocation() designe encore la case de DEPART.
+	 * Se fier a la position du joueur a ce moment-la inversait tout : vol coupe en entrant
+	 * dans son claim, vol conserve en en sortant.
+	 */
+	public boolean canFlyIn(Player player, Land land) {
+
+		if (!landsPresent) {
+			return true;
+		}
+
 		if (player.getGameMode() == GameMode.CREATIVE || player.getGameMode() == GameMode.SPECTATOR) {
 			return true;
 		}
 
-		return isOwnLand(player, LandsPlugin.getInstance().getLandRepository().getLandAt(player.getLocation()));
+		return isOwnLand(player, land);
 	}
 
 	/** Claim personnel du joueur uniquement : les claims de guilde et systeme sont exclus. */
@@ -96,7 +113,9 @@ public class ClaimFlyListener implements Listener {
 			return;
 		}
 
-		refresh(event.getPlayer());
+		// Claim de DESTINATION, fourni par l'evenement : le joueur n'y est pas encore.
+		Player player = event.getPlayer();
+		apply(player, canFlyIn(player, to));
 	}
 
 	/**
@@ -104,6 +123,11 @@ public class ClaimFlyListener implements Listener {
 	 * A appeler aussi a la connexion et a l'activation d'un compagnon.
 	 */
 	public void refresh(Player player) {
+		apply(player, canFlyHere(player));
+	}
+
+	/** Accorde ou retire le vol selon la decision deja prise, avec la protection contre la chute. */
+	private void apply(Player player, boolean allowedHere) {
 
 		PlayerData data = PlayerData.instanceOf(player);
 
@@ -113,7 +137,7 @@ public class ClaimFlyListener implements Listener {
 
 		boolean hadFly = data.isFlyMode();
 
-		main.getCustomAbility().giveFly(player); // re-evalue via canFlyHere()
+		main.getCustomAbility().giveFly(player, allowedHere);
 
 		if (hadFly && !data.isFlyMode() && !player.isOnGround()) {
 			fallGrace.put(player.getUniqueId(), System.currentTimeMillis() + FALL_GRACE_MILLIS);

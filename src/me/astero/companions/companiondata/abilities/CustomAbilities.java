@@ -77,9 +77,15 @@ public class CustomAbilities implements Listener {
 	
 	public void giveFly(Player player)
 	{
+		giveFly(player, main.getClaimFly().canFlyHere(player));
+	}
+
+	/** @param allowedHere decision deja prise sur l'endroit (voir ClaimFlyListener#canFlyIn) */
+	public void giveFly(Player player, boolean allowedHere)
+	{
 		if(main.getFileHandler().getCompanionDetails().get(PlayerData.instanceOf(player).getActiveCompanionName().toLowerCase()).getAbilityList().contains("FLY")
 				&& !PlayerData.instanceOf(player).isToggled()
-				&& main.getClaimFly().canFlyHere(player))
+				&& allowedHere)
 		{
 
 				player.setAllowFlight(true);
