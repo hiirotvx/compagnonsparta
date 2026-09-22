@@ -55,7 +55,11 @@ public class UpgradeMenu {
 			
 
 			
-			if(PlayerCache.instanceOf(player.getUniqueId()).getOwnedCache().get(activeCompanion.toLowerCase()).getAbilityLevel() == main.getFileHandler().getMaxAbilityLevel())
+			if(main.getClaimFly().isUpgradeLocked(activeCompanion))
+			{
+				abilityLevel = main.getClaimFly().lockedItem();
+			}
+			else if(PlayerCache.instanceOf(player.getUniqueId()).getOwnedCache().get(activeCompanion.toLowerCase()).getAbilityLevel() == main.getFileHandler().getMaxAbilityLevel())
 			{
 				abilityLevel = main.getFileHandler().getAbilityLevelM();
 			}

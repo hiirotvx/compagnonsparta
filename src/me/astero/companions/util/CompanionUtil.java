@@ -156,6 +156,13 @@ public class CompanionUtil {
 	
 	public void upgradeAbility(Player player, boolean withdraw, boolean check, boolean upgrade)
 	{
+		// Compagnons volants : amelioration payante refusee avant tout prelevement.
+		// Redescendre reste possible, et /forceupgrade (sans prelevement) n'est pas concerne.
+		if(upgrade && withdraw && main.getClaimFly().isUpgradeLocked(PlayerData.instanceOf(player).getActiveCompanionName()))
+		{
+			MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(), main.getClaimFly().upgradeLockedMessage());
+			return;
+		}
 
 
 		if(check)

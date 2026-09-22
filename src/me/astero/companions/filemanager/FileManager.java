@@ -157,6 +157,12 @@ public class FileManager {
 		main.getCompanionUtil().setPrefix(main.getFileManager().getMessagesData().getString("messages.prefix"));
 		
 		main.getFileHandler().cache();
+
+		// fly.yml : mondes et claims systeme interdits, blocage de l'amelioration.
+		if(main.getClaimFly() != null)
+		{
+			main.getClaimFly().reloadSettings();
+		}
     }
     
     public void scheduledSave()

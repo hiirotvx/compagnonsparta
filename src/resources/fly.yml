@@ -1,0 +1,42 @@
+# ============================================================
+#  Vol des compagnons (capacite FLY, comme le Dragon)
+# ============================================================
+#
+# Le vol est autorise dans un claim uniquement si le joueur peut A LA FOIS y casser
+# et y poser des blocs. Cela couvre :
+#   - ses propres claims et sous-claims,
+#   - les claims ou il a ete trust pour casser ET poser,
+#   - les claims de sa guilde, selon les droits accordes a la guilde.
+#
+# Tout se recharge avec /c reload.
+
+# Claims SYSTEME ou le vol est interdit, meme si le joueur a les droits (le staff,
+# par exemple). Nom exact du claim, sans tenir compte des majuscules.
+#
+# Ne retirez pas "Zone sauvage" : c'est un claim systeme ou tout le monde peut
+# construire. Sans lui dans cette liste, le vol serait autorise dans toute la nature.
+blocked-system-lands:
+  - "Zone sauvage"
+  - "Spawn"
+
+# Mondes ou le vol est interdit partout, claims compris.
+# Remplacez par les noms reels de vos mondes (dossiers du serveur).
+blocked-worlds:
+  - "world_nether"
+  - "world_the_end"
+
+# Bloque l'amelioration de capacite des compagnons qui volent : l'argent n'est pas
+# preleve, et l'atelier affiche l'objet ci-dessous a la place du bouton.
+# Attention : le niveau fixe aussi la puissance de leurs effets passifs. Pour le Dragon,
+# niveau 1 = Resistance I et Force I, niveau 3 = Resistance III et Force III.
+# Les compagnons deja ameliores gardent leur niveau actuel.
+lock-upgrade: true
+
+locked-item:
+  type: BARRIER
+  name: "<!italic><#8fa0ae><b>Amélioration indisponible</b>"
+  description:
+    - "<!italic><#8fa0ae>Ce compagnon ne peut pas être amélioré."
+
+messages:
+  upgrade-locked: "<#ff8a8a>Ce compagnon ne peut pas être amélioré."
