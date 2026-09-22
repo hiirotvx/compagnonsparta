@@ -115,7 +115,9 @@ public class CompanionsPlugin extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new PlayerDetailsMenuListener(this), this);	
 		getLogger().info(ChatColor.GOLD + ">" + ChatColor.GRAY + " Event Listeners are loaded up!");
 		
-		getCommand("companions").setExecutor(new CompanionCommand(this));
+		CompanionCommand companionCommand = new CompanionCommand(this);
+		getCommand("companions").setExecutor(companionCommand);
+		getCommand("companions").setTabCompleter(companionCommand);
 		getCommand("givecompanion").setExecutor(new GiveCompanionCommand(this));
 		getCommand("removecompanion").setExecutor(new RemoveCompanionCommand(this));
 		getCommand("givecompanionitem").setExecutor(new GiveCompanionItemCommand(this));

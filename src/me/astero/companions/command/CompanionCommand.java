@@ -15,7 +15,7 @@ import me.astero.companions.gui.OwnedMenu;
 import me.astero.companions.gui.PlayerDetailsMenu;
 import me.astero.companions.gui.UpgradeMenu;
 
-public class CompanionCommand implements CommandExecutor {
+public class CompanionCommand implements CommandExecutor, org.bukkit.command.TabCompleter {
 	
 	private CompanionsPlugin main;
 	
@@ -42,17 +42,7 @@ public class CompanionCommand implements CommandExecutor {
 			{
 				if(args[0].equalsIgnoreCase("use"))
 				{
-					if(main.getCompanionAccess().activate(player, args[1]))
-					{
-						MessageUtil.send(player, main.getCompanionUtil().getPrefix()
-								+ main.getFileHandler().getCompanionSetForPlayerMessage()
-										.replace("%companion%", args[1].toUpperCase()));
-					}
-					else
-					{
-						MessageUtil.send(player, main.getCompanionUtil().getPrefix()
-								+ main.getFileHandler().getNoPermissionMessage());
-					}
+					summon(player, args[1]);
 				}
 				else if(args[0].equalsIgnoreCase("details"))
 				{
@@ -333,6 +323,11 @@ public class CompanionCommand implements CommandExecutor {
 					MessageUtil.send(player, message);
 				}
 			}
+			else if(main.getFileHandler().getCompanionDetails().containsKey(args[0].toLowerCase()))
+			{
+				// Raccourci : /c <compagnon> invoque directement le compagnon.
+				summon(player, args[0]);
+			}
 			else
 			{
 				MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(), main.getFileHandler().getInvalidUsageMessage());
@@ -370,4 +365,67 @@ public class CompanionCommand implements CommandExecutor {
 		return false;
 	}
 
+
+	/** Invoque un compagnon si le joueur en a la permission, et confirme avec son nom de menu. */
+	private void summon(Player player, String companion)
+	{
+		String key = companion.toLowerCase();
+		if(main.getCompanionAccess().activate(player, key))
+		{
+			MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(),
+					main.getFileHandler().getCompanionSetForPlayerMessage().replace("%companion%", displayName(key)));
+		}
+		else
+		{
+			MessageUtil.sendPrefixed(player, main.getCompanionUtil().getPrefix(), main.getFileHandler().getNoPermissionMessage());
+		}
+	}
+
+	private String displayName(String key)
+	{
+		me.astero.companions.filemanager.CompanionDetails details = main.getFileHandler().getCompanionDetails().get(key);
+		return details != null && details.getItemName() != null ? details.getItemName() : key;
+	}
+
+	/**
+	 * Autocompletion : seuls les compagnons dont le joueur a la permission sont proposes,
+	 * suivis des sous-commandes qu'il a le droit d'utiliser.
+	 */
+	@Override
+	public java.util.List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args)
+	{
+		if(!(sender instanceof Player player))
+		{
+			return java.util.List.of();
+		}
+
+		java.util.List<String> suggestions = new java.util.ArrayList<>();
+		String typed = args[args.length - 1].toLowerCase();
+
+		if(args.length == 1)
+		{
+			suggestions.addAll(main.getCompanionAccess().owned(player));
+			suggestions.addAll(java.util.List.of("upgrade", "use", "off", "list", "help"));
+			if(player.hasPermission("companions.player.toggle")) suggestions.add("toggle");
+			if(player.hasPermission("companions.player.details")) suggestions.add("details");
+			if(player.hasPermission("companions.admin.reload")) suggestions.add("reload");
+		}
+		else if(args.length == 2 && args[0].equalsIgnoreCase("use"))
+		{
+			suggestions.addAll(main.getCompanionAccess().owned(player));
+		}
+		else if(args.length == 2 && args[0].equalsIgnoreCase("details") && player.hasPermission("companions.player.details"))
+		{
+			org.bukkit.Bukkit.getOnlinePlayers().forEach(p -> suggestions.add(p.getName()));
+		}
+		else if(args.length == 2 && args[0].equalsIgnoreCase("upgrade"))
+		{
+			suggestions.addAll(java.util.List.of("ability", "rename", "hidename", "changeweapon"));
+		}
+
+		return suggestions.stream()
+				.filter(s -> s.toLowerCase().startsWith(typed))
+				.distinct()
+				.toList();
+	}
 }
