@@ -39,6 +39,13 @@ public class OwnedMenuListener implements Listener {
 				{
 					e.setCancelled(true);
 
+					if(main.getMenuDecor().isClose(e.getCurrentItem()))
+					{
+						player.closeInventory();
+						return;
+					}
+					if(main.getMenuDecor().isDecor(e.getCurrentItem())) return;
+
 					Component currentName = e.getCurrentItem().getItemMeta().displayName();
 					if(currentName == null) return;
 

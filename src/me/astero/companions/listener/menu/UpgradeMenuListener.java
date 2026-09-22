@@ -33,6 +33,7 @@ public class UpgradeMenuListener implements Listener {
             }
 
             event.setCancelled(true);
+            if (main.getMenuDecor().isDecor(event.getCurrentItem())) return;
             Component clickedName = event.getCurrentItem().getItemMeta().displayName();
             if (clickedName == null) return;
 

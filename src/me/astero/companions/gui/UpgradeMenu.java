@@ -96,6 +96,18 @@ public class UpgradeMenu {
 		upgradeDetailsMeta.lore(componentLore);
 		
 		main.getFileHandler().getUpgradeDetails().setItemMeta(upgradeDetailsMeta);
+
+		// La fiche montre la tete du compagnon actif, avec la description de la config.
+		// Rien ne compare cet objet au clic : changer son apparence est sans risque.
+		ItemStack details = main.getFileHandler().getUpgradeDetails();
+		if(PlayerData.instanceOf(player).hasActiveCompanionSelected()
+				&& main.getFileHandler().getCompanionDetails().containsKey(activeCompanion.toLowerCase()))
+		{
+			details = main.getFileHandler().getCompanionDetails().get(activeCompanion.toLowerCase()).getOwnedItemType().clone();
+			ItemMeta headMeta = details.getItemMeta();
+			headMeta.lore(componentLore);
+			details.setItemMeta(headMeta);
+		}
 		
 		
 
@@ -104,12 +116,13 @@ public class UpgradeMenu {
 		
 		Inventory upgradeMenu = new InventoryBuilder(main.getFileHandler().getUpgradeAbilitiesSize(), main.getFileHandler().getUpgradeAbilitiesTitle())
 				.setItem(main.getFileHandler().getGoBackUDSlot(), main.getFileHandler().getGoBackUD())
-				.setItem(main.getFileHandler().getUpgradeDetailsSlot(), main.getFileHandler().getUpgradeDetails())
+				.setItem(main.getFileHandler().getUpgradeDetailsSlot(), details)
 				.setItem(main.getFileHandler().getAbilityLevelSlot(), abilityLevel)
 				.setItem(main.getFileHandler().getRenameCompanionSlot(), main.getFileHandler().getRenameCompanion())
 				.setItem(main.getFileHandler().getHideCompanionSlot(), main.getFileHandler().getHideCompanionN())
 				.setItem(main.getFileHandler().getChangeWeaponSlot(), main.getFileHandler().getChangeWeapon())
 				.build();
+		main.getMenuDecor().fillEmpty(upgradeMenu);
 		
 		try
 		{

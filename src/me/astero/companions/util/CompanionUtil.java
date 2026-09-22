@@ -925,12 +925,6 @@ public class CompanionUtil {
 		
 		main.getFileHandler().getCompanionDetail().setItemMeta(companionDetailMeta);
 		
-		Inventory ownedMenu = new InventoryBuilder(main.getFileHandler().getOwnedCompanionsSize(), menuName)
-				.setItem(main.getFileHandler().getGoBackSlot(), main.getFileHandler().getGoBack())
-				.setItem(main.getFileHandler().getNextPageSlot(), main.getFileHandler().getNextPage())
-				.setItem(main.getFileHandler().getCompanionDetailSlot(), main.getFileHandler().getCompanionDetail())
-				.build();
-		
 		ArrayList<ItemStack> itemStackArray = new ArrayList<>();
 		
 		for(String getCompanionName : PlayerCache.instanceOf(target.getUniqueId()).getOwnedCache().keySet())
@@ -946,9 +940,32 @@ public class CompanionUtil {
 			}
 		}
 		
+		int size = main.getFileHandler().getOwnedCompanionsSize();
+		int perPage = me.astero.companions.util.MenuDecor.innerSlots(size);
+		int page = PlayerData.instanceOf(player).getPageNumber();
+
+		InventoryBuilder builder = new InventoryBuilder(size, menuName)
+				.setItem(main.getFileHandler().getCompanionDetailSlot(), main.getFileHandler().getCompanionDetail())
+				.setItem(main.getMenuDecor().closeSlot(size), main.getMenuDecor().closeButton());
+		// Fleches affichees seulement si elles menent quelque part : sans cela, "Page suivante"
+		// sur la derniere page menait a une page vide.
+		if(page > 1)
+		{
+			builder.setItem(main.getFileHandler().getGoBackSlot(), main.getFileHandler().getGoBack());
+		}
+		if(page * perPage < itemStackArray.size())
+		{
+			builder.setItem(main.getFileHandler().getNextPageSlot(), main.getFileHandler().getNextPage());
+		}
+		Inventory ownedMenu = builder.build();
+
+		// Le cadre est pose AVANT les compagnons : la pagination remplit les premieres cases
+		// libres, qui sont alors exactement celles du centre.
+		main.getMenuDecor().fillBorder(ownedMenu);
+
 		PageSystem ps = new PageSystem(main);
-		
-		ps.buildPageSystem(ownedMenu, player, main.getFileHandler().getOwnedCompanionsSize(), 3, itemStackArray);
+
+		ps.buildPageSystem(ownedMenu, player, size, size - perPage, itemStackArray);
 		
 		try
 		{

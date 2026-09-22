@@ -52,6 +52,7 @@ public class CompanionsPlugin extends JavaPlugin {
 	
 
 	@Getter private FileHandler fileHandler;
+	@Getter private me.astero.companions.util.MenuDecor menuDecor;
 	@Getter private FileManager fileManager;
 	@Getter private Companions companions;
 	@Getter private CompanionUtil companionUtil;
@@ -88,6 +89,7 @@ public class CompanionsPlugin extends JavaPlugin {
 		potionEffectAbility = new PotionEffectAbility(this);
 		customAbility = new CustomAbilities(this);
 		companionAccess = new me.astero.companions.permission.CompanionAccess(this);
+		menuDecor = new me.astero.companions.util.MenuDecor(this);
 		claimFly = new me.astero.companions.integration.ClaimFlyListener(this);
 		
 
