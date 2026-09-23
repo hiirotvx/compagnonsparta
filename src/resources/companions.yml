@@ -17,14 +17,14 @@ companions:
   # Permission will be companions.buy.reaper : LINK for a guide on companion creation
   reaper:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.
-    name: "<dark_gray><b>REAPER</b>"
+    name: "<dark_gray><b>Faucheur</b>"
     nameVisible: true
     sound: ENTITY_PARROT_IMITATE_ENDER_DRAGON    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM5YjVkMmU2MjRjMTQ3ZWZlNDdiMTMwZTFjZGRiOGEzNzdjZGIzZTc3NDJiZDJjZjRkZGRmNjlhNjg5MjcyIn19fQ=="
     # This uses custom model data and it overwrites the player skull if it's not set to "NONE". If you want to use it, "MATERIAL:DATA", e.g., "CLOCK:15" for clock material and nbt data value 15.
     customModelData: NONE
     # Set to NONE if you don't want a weapon.
-    weapon: STONE_HOE
+    weapon: ender_pearl
     # Set to NONE if you don't want an ability.
     # 2@ in front of the ability means start at level 2. This will make it a strength level 2 potion when bought.
     ability: 2@INCREASE_DAMAGE
@@ -59,29 +59,25 @@ companions:
       shop:
         type: COMPANION_SKULL
         amount: 1
-        name: "<gold><b>REAPER</b>"
-        price: 5000
+        name: "<!italic><#5fd3ff><b>Faucheur</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>The Reaper that controls death,"
-          - "<gray> transformed into a cute Companion."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED DAMAGE"         
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>REAPER Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Maître de la mort, en version mini.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Dégâts augmentés"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
   christmas_reaper:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.
-    name: "<dark_gray><b>REAPER</b>"
+    name: "<dark_gray><b>Faucheur</b>"
     nameVisible: true
     sound: ENTITY_PARROT_IMITATE_ENDER_DRAGON    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4N2E3NDA5NWJlYzhiZjg1ZjllODEzZjEyNDk3MWExZGRkMTk5MWY3MTFiNzRmOTg0OWNmZmM5MmU0YjFjIn19fQ=="
     # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
     customModelData: NONE
     # Set to NONE if you don't want a weapon.
-    weapon: STONE_HOE
+    weapon: ender_pearl
     # Set to NONE if you don't want an ability.
     ability: INCREASE_DAMAGE
     animation: HEADSHAKE; GHOSTLY    
@@ -115,24 +111,19 @@ companions:
       shop:
         type: COMPANION_SKULL
         amount: 1
-        name: "<red><b>REAPER (SKIN)</b>"
-        price: 5000
+        name: "<!italic><#5fd3ff><b>Faucheur</b> <#8fa0ae>(Noël)"
+        price: 0
         description:
-          - " "
-          - "<gray>The Reaper that controls death,"
-          - "<gray> transformed into a cute Companion."
-          - " "
-          - "<gray>(<gold>CHRISTMAS SKIN <gray>- 2019)"
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED DAMAGE"         
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>REAPER Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"         
+          - "<!italic><#8fa0ae><i>Maître de la mort, en habits de fête.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Dégâts augmentés"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
 
   frog:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<green>FROG" 
+    name: "<green>Grenouille"
     nameVisible: true    
     sound: ENTITY_PARROT_IMITATE_PHANTOM     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdlYmNlZjQ2ODNjZGI3MTYzZTk2OWU0ZTIyNjlmMzY3M2E1ZDVlNmI3OGUwNmZhZWU0NWJjZjdjNDljMzk3In19fQ=="
@@ -172,23 +163,20 @@ companions:
       shop:
         type: EVOKER_SPAWN_EGG
         amount: 1
-        name: "<gold><b>FROG</b>"
-        price: 3000
+        name: "<!italic><#5fd3ff><b>Grenouille</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>*croaks*"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ LEAP INTO THE AIR BY LEFT CLICKING!"        
-          - "<yellow>➩ FALL SLOWER"  
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>FROG Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>*coâ*</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Bond au clic gauche"
+          - "<!italic><#6ee7b7>+ Chute ralentie"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
           
   halloween_frog:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<gold><b>FROG</b>" 
+    name: "<gold><b>Grenouille</b>"
     nameVisible: true    
     sound: ENTITY_PARROT_IMITATE_PHANTOM     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODMxODE3ZGExZTE3MWEzN2E5MDc3ZDliZGExYTFiZmNhZjVmOWEzNWRjOTM5MTc1MWRiZGE0NDg1MTJlMzI4YSJ9fX0="
@@ -228,26 +216,21 @@ companions:
       shop:
         type: COMPANION_SKULL
         amount: 1
-        name: "<gold><b>FROG (SKIN)</b>"
-        price: 5000
+        name: "<!italic><#5fd3ff><b>Grenouille</b> <#8fa0ae>(Halloween)"
+        price: 0
         description:
-          - " "
-          - "<gray>*croaks*"
-          - ""
-          - "<gray>(<gold>HALLOWEEN SKIN <gray>- 2019)"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ LEAP INTO THE AIR BY LEFT CLICKING!"        
-          - "<yellow>➩ FALL SLOWER"  
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>FROG Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>5 COMPANION COINS"          
+          - "<!italic><#8fa0ae><i>*coâ*, en plus effrayant.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Bond au clic gauche"
+          - "<!italic><#6ee7b7>+ Chute ralentie"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
       
       
   pokeball:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<red>POKEBALL"
+    name: "<red>Pokéball"
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     nameVisible: true    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZlNDc2NDA4NDM3NDRjZDU3OTY5NzlkMTE5NmZiOTM4MzE3ZWM0MmIwOWZjY2IyYzU0NWVlNGM5MjVhYzJiZCJ9fX0="
@@ -287,23 +270,20 @@ companions:
       shop:
         type: SALMON_SPAWN_EGG
         amount: 1
-        name: "<gold><b>POKEBALL</b>"
-        price: 6000
+        name: "<!italic><#5fd3ff><b>Pokéball</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I wonder what's stored inside of me?"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ REGENERATION"        
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>POKEBALL Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Que peut-elle bien renfermer ?</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Régénération"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
      
       
   dragon:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<aqua><b>DRAGON</b>"
+    name: "<aqua><b>Dragon</b>"
     nameVisible: true  
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTMzZjY2ZTE1MTkyNjNlMTA5ZThjOGM4ZDViOWNlNDEwMTQwMjg3MzdlYjk4OWU3YWU4ZmM2ZGUxYzcyNjdhYiJ9fX0="
@@ -343,26 +323,22 @@ companions:
       shop:
         type: SHULKER_SPAWN_EGG
         amount: 1
-        name: "<gold><b>DRAGON</b>"
-        price: 321000
+        name: "<!italic><#5fd3ff><b>Dragon</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I'm a legend that hold many"
-          - "<gray> abilities to my name."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ FLY"
-          - "<yellow>➩ DAMAGE RESISTANCE"
-          - "<yellow>➩ INCREASED DAMAGE"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>DRAGON Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Une légende aux mille pouvoirs.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Vol dans votre claim"
+          - "<!italic><#6ee7b7>+ Résistance aux dégâts"
+          - "<!italic><#6ee7b7>+ Dégâts augmentés"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
        
       
   cake:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "CAKE"
+    name: "Gâteau"
     nameVisible: true  
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2MzN2ViODUyNTVmMWI3NTRkMTA4YmUyZGRhZDY1MTk5YjFkNzA4YmZhNjBiMTZkYzIwZjE3YzkxNzFjNDI2In19fQ=="
@@ -402,24 +378,21 @@ companions:
       shop:
         type: CHICKEN_SPAWN_EGG
         amount: 1
-        name: "<gold><b>CAKE</b>"
-        price: 7000
+        name: "<!italic><#5fd3ff><b>Gâteau</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>The cake is a lie?"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED HUNGER"
-          - "<yellow>➩ Chance to gain regeneration when attacked"
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>CAKE Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Le gâteau est un mensonge ?</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Régénération quand frappé"
+          - "<!italic><#ff8a8a>− Faim accrue"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
  
       
   turtle:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<dark_green>TURTLE"
+    name: "<dark_green>Tortue"
     nameVisible: true  
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEyYjU4Yzg0MWIzOTQ4NjNkYmNjNTRkZTFjMmFkMjY0OGFmOGYwM2U2NDg5ODhjMWY5Y2VmMGJjMjBlZTIzYyJ9fX0="
@@ -459,25 +432,22 @@ companions:
       shop:
         type: TURTLE_SPAWN_EGG
         amount: 1
-        name: "<gold><b>TURTLE</b>"
-        price: 5000
+        name: "<!italic><#5fd3ff><b>Tortue</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I have a hard shell that protects you."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ WATER BREATHING"
-          - "<yellow>➩ DAMAGE RESISTANCE"
-          - "<yellow>➩ Chance to give your attackers slowness"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>TURTLE Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Sa carapace vous protège.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Respiration aquatique"
+          - "<!italic><#6ee7b7>+ Résistance aux dégâts"
+          - "<!italic><#6ee7b7>+ Ralentit vos agresseurs"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
       
       
   ghast:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<b>GHAST</b>"
+    name: "<b>Ghast</b>"
     nameVisible: true   
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI2YTcyMTM4ZDY5ZmJiZDJmZWEzZmEyNTFjYWJkODcxNTJlNGYxYzk3ZTVmOTg2YmY2ODU1NzFkYjNjYzAifX19"
@@ -517,24 +487,21 @@ companions:
       shop:
         type: GHAST_SPAWN_EGG
         amount: 1
-        name: "<gold><b>GHAST</b>"
-        price: 8000
+        name: "<!italic><#5fd3ff><b>Ghast</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Shooting fireballs is my forte."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ Chance to gain strength when attacked"
-          - "<yellow>➩ Chance to shoot fireball on left-click"
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>GHAST Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"    
+          - "<!italic><#8fa0ae><i>Les boules de feu, sa passion.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Force quand frappé"
+          - "<!italic><#6ee7b7>+ Boule de feu au clic gauche"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
                
 
   kirby:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<light_purple>KIRBY"
+    name: "<light_purple>Kirby"
     nameVisible: true    
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljYjU5ZTBmMGIzZDBkYzhiMjFjZDJhYmZmOGYyNjdmYjZjYWFkOTdmN2IxZDBiMmIwNzg1NTdlNjZjY2QxIn19fQ=="
@@ -574,24 +541,21 @@ companions:
       shop:
         type: PIG_SPAWN_EGG
         amount: 1
-        name: "<gold><b>KIRBY</b>"
-        price: 4000
+        name: "<!italic><#5fd3ff><b>Kirby</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I'm just here to look cute!"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED SPEED"
-          - "<yellow>➩ Chance to give your attackers levitation"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>KIRBY Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Mignon, et c'est tout.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Vitesse accrue"
+          - "<!italic><#6ee7b7>+ Fait léviter vos agresseurs"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
       
 
   naruto:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<gold>NARUTO"
+    name: "<gold>Naruto"
     nameVisible: true   
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA2ZTM0YzFjOTRjN2I4MjljNTlkMDFjNzQ1M2Q1ZjNlODI1OWYzODljMmFjYTJmYTMxNGRjYTQwODY5M2NlIn19fQ=="
@@ -631,33 +595,29 @@ companions:
       shop:
         type: TROPICAL_FISH_SPAWN_EGG
         amount: 1
-        name: "<gold><b>NARUTO</b>"
-        price: 10000
+        name: "<!italic><#5fd3ff><b>Naruto</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I come and go like"
-          - "<gray> you never see me coming."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED SPEED"
-          - "<yellow>➩ Chance to gain regeneration when attacked"
-          - "<yellow>➩ Chance to dodge attacks when attacked"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>NARUTO Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Vous ne le voyez jamais venir.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Vitesse accrue"
+          - "<!italic><#6ee7b7>+ Esquive les coups"
+          - "<!italic><#6ee7b7>+ Régénération quand frappé"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
    
 
   knight:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "KNIGHT"
+    name: "Chevalier"
     nameVisible: true  
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjdjMTc4NjVjMjc5MzRmOGM4ZWM2YzYyN2UxZmUyZDk5Zjc4M2VjOGFlNDE0Y2EyZDRmZDM2NDBhN2YzYyJ9fX0="
     # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
     customModelData: NONE    
     # Set to NONE if you don't want a weapon.
-    weapon: DIAMOND_SWORD
+    weapon: ender_pearl
     # Set to NONE if you don't want an ability.
     ability: WITHER_ATTACK_CHANCE; INCREASE_DAMAGE; DAMAGE_RESISTANCE_DEFENSE_CHANCE
     chestplate: LEATHER_CHESTPLATE
@@ -690,31 +650,28 @@ companions:
       shop:
         type: VEX_SPAWN_EGG
         amount: 1
-        name: "<gold><b>KNIGHT</b>"
-        price: 10000
+        name: "<!italic><#5fd3ff><b>Chevalier</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>I fight with honor."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ INCREASED STRENGTH"
-          - "<yellow>➩ Chance to give your attackers wither"   
-          - "<yellow>➩ Chance to gain damage resistance when attacked"       
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>KNIGHT Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Fidèle à son serment.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Dégâts augmentés"
+          - "<!italic><#6ee7b7>+ Wither sur vos agresseurs"
+          - "<!italic><#6ee7b7>+ Résistance quand frappé"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
           
   miner:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "MINER"
+    name: "Mineur"
     nameVisible: true
     sound: ENTITY_PARROT_IMITATE_PHANTOM    
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmM4Mjc0MmIyYTE3ZWViZGVhYWQyYjk1ZTU2NmE1ZjAyNTBjMzU1NzQyOWY2YTM5YTc5YjZhYjhiZjgifX19"
     # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
     customModelData: NONE    
     # Set to NONE if you don't want a weapon.
-    weapon: DIAMOND_PICKAXE
+    weapon: ender_pearl
     # Set to NONE if you don't want an ability.
     ability: FAST_DIGGING; MINING_VISION
     chestplate: LEATHER_CHESTPLATE
@@ -747,22 +704,19 @@ companions:
       shop:
         type: BLAZE_SPAWN_EGG
         amount: 1
-        name: "<gold><b>MINER</b>"
-        price: 70000
+        name: "<!italic><#5fd3ff><b>Mineur</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Mining, mining, mining."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ Fast Digging"
-          - "<yellow>➩  Gain night-vision when mining underground"                 
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>MINER Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"
+          - "<!italic><#8fa0ae><i>Miner, encore et toujours.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Minage accéléré"
+          - "<!italic><#6ee7b7>+ Vision nocturne sous terre"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
   cloud:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<b>CLOUD</b>" 
+    name: "<b>Nuage</b>"
     nameVisible: true    
     sound: ENTITY_PARROT_IMITATE_PHANTOM     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDY2YjEwYmY2ZWUyY2Q3ZTNhYzk2ZDk3NDllYTYxNmFhOWM3MzAzMGJkY2FlZmZhZWQyNDllNTVjODQ5OTRhYyJ9fX0="
@@ -802,30 +756,26 @@ companions:
       shop:
         type: BONE_MEAL
         amount: 1
-        name: "<gold><b>CLOUD</b>"
-        price: 50000
+        name: "<!italic><#5fd3ff><b>Nuage</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Careful not to make the"
-          - "<gray> Cloud Companion angry! Because it's striking!"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO STRIKE LIGHTNING ON ENEMY HIT"         
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>CLOUD Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"   
+          - "<!italic><#8fa0ae><i>Ne le mettez pas en colère.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Foudroie l'ennemi touché"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
           
   xavier:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<yellow>XAVIER" 
+    name: "<yellow>Xavier"
     nameVisible: true    
     sound: ENTITY_PARROT_IMITATE_PHANTOM     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUzZjZhNGE4ZTY4ZWRmYzE0OWIyZTMyNTk3ZGYzZTVmNGMzNTgxZjdhNDdjMzg1MTRhYjJhNGVkYTM5NTA1ZCJ9fX0="
     # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
     customModelData: NONE    
     # Set to NONE if you don't want a weapon.
-    weapon: FISHING_ROD
+    weapon: ender_pearl
     # Set to NONE if you don't want an ability.
     ability: SPEED_BURST
     chestplate: LEATHER_CHESTPLATE
@@ -858,81 +808,19 @@ companions:
       shop:
         type: TROPICAL_FISH
         amount: 1
-        name: "<gold><b>XAVIER</b>"
-        price: 50000
+        name: "<!italic><#5fd3ff><b>Xavier</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>A mysterious masked man."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO ACTIVATE SPEED BURST ON HIT"         
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>XAVIER Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"   
+          - "<!italic><#8fa0ae><i>Toujours un temps d'avance.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Accélération soudaine"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
           
-  wizard:
-    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<blue><b>WIZARD</b>" 
-    nameVisible: true    
-    sound: ENTITY_PARROT_IMITATE_PHANTOM     
-    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEyNzg5ZWYwMjk1MzAwNzQ1ODU0NDJmYWUxMmJkOTFjODk0N2MwZjFiNDU2Y2YxMGMxYThkZWUyMDkxMDNkYyJ9fX0="
-    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
-    customModelData: NONE    
-    # Set to NONE if you don't want a weapon.
-    weapon: BLAZE_ROD
-    # Set to NONE if you don't want an ability.
-    ability: LIGHTNING; FIREBALL; LEVITATION_DEFENSE_CHANCE
-    chestplate: LEATHER_CHESTPLATE
-    leatherColor:
-      red: 0
-      green: 0
-      blue: 123
-    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
-    rightArmPose: 
-      angle1: 0
-      angle2: 0
-      angle3: 0   
-    leftArmPose: 
-      angle1: 0
-      angle2: 0
-      angle3: 0              
-    headPose: 
-      angle1: 0
-      angle2: 0
-      angle3: 0    
-    bodyPose: 
-      angle1: 0
-      angle2: 0
-      angle3: 0  
-    placement:
-      x: 0
-      y: 1.7
-      z: 0      
-    GUI:
-      shop:
-        type: LEGACY_RED_ROSE
-        amount: 1
-        name: "<gold><b>WIZARD</b>"
-        price: 50000
-        description:
-          - " "
-          - "<gray>The definition of Magic."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO SEND OUT LIGHTNING ON ENEMY HIT"         
-          - "<yellow>➩ CHANCE TO SHOOT OUT FIREBALLS"     
-          - ""
-          - "<red>THE WIZARD HAS UNSTABLE SKILLS, THEREFORE, IT CAUSES YOU TO"
-          - "<red>LEVITATE WHEN DAMAGED OCCASIONALLY."          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>WIZARD Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"   
-
   shark:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<dark_blue><b>SHARK</b>" 
+    name: "<dark_blue><b>Requin</b>"
     nameVisible: true    
     sound: ENTITY_ELDER_GUARDIAN_AMBIENT     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzE2MzZhZTZlNTU4Y2Y4MzVlN2E0M2JjZmQwYmQ0YTI3N2Q1NmQ2NmE1ZjRjOGJjYzBhMDNlZDY2MzI1MTAifX19"
@@ -972,29 +860,21 @@ companions:
       shop:
         type: PRISMARINE_SHARD
         amount: 1
-        name: "<gold><b>SHARK</b>"
-        price: 20000
+        name: "<!italic><#5fd3ff><b>Requin</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Faster than most fish."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ FASTER SPEED IN WATER"         
-          - "<yellow>➩ FISH LUNGS - WATER BREATHING"        
-          - " "
-          - "<red>DON'T GET CAUGHT IN FISHING NETS!"
-          - "<red>A CHANCE FOR YOU TO GET A SLOWNESS EFFECT ON DAMAGE"  
-          - ""
-          - "<gray>(<red>!<gray>) As your Companion grows stronger,"
-          - "<gray> your debuff grows stronger too!"       
-          - ""          
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>SHARK Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"          
+          - "<!italic><#8fa0ae><i>Plus vif que les poissons.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Nage accélérée"
+          - "<!italic><#6ee7b7>+ Respiration aquatique"
+          - "<!italic><#ff8a8a>− Ralenti quand frappé"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
 
   irongolem:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<gray><b>IRON GOLEM</b>" 
+    name: "<gray><b>Golem de fer</b>"
     nameVisible: true    
     sound: ENTITY_IRON_GOLEM_ATTACK     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQzNzllYTNlODFkOWQzYjk5Yzk5YmMzNzIyMzRkMmJhYjQ5MzFlNzU4NGVkMzc5N2M0ZWE4OGU3ZGQ4NmExNSJ9fX0="
@@ -1034,28 +914,20 @@ companions:
       shop:
         type: IRON_INGOT
         amount: 1
-        name: "<gold><b>IRON GOLEM</b>"
-        price: 20000
+        name: "<!italic><#5fd3ff><b>Golem de fer</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Doesn't like people coming close."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO FLING YOUR ENEMIES UP."             
-          - " "
-          - "<red>DUE TO THE HEAVINESS, "
-          - "<red> YOU'RE SLOWED DOWN!"  
-          - ""
-          - "<gray>(<red>!<gray>) As your Companion grows stronger,"
-          - "<gray> your debuff grows stronger too!"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>IRONGOLEM Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"   
+          - "<!italic><#8fa0ae><i>N'aime pas qu'on l'approche.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Projette vos ennemis"
+          - "<!italic><#ff8a8a>− Ralenti par son poids"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
           
   goldenapple:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<yellow><b>GOLDEN APPLE</b>" 
+    name: "<yellow><b>Pomme dorée</b>"
     nameVisible: true    
     sound: BLOCK_METAL_STEP     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI4NjhlYzZkYmRiYjZiZWNmNjk4ZGExMzZlN2E2Y2QyOGUxOTMxNDc5NmNlMjZhM2Y2N2Q2YWI2NTZlYjIxOSJ9fX0="
@@ -1064,7 +936,7 @@ companions:
     # Set to NONE if you don't want a weapon.
     weapon: NONE
     # Set to NONE if you don't want an ability.
-    ability: COMMAND/15/25/eco give %player% 2500/<gold>You have received $2500!/<gold>This is a broadcast message to say that %player% just received $2500!; SLOW
+    ability: COMMAND/15/25/eco give %player% 2500/<#6ee7b7>Votre Pomme dorée vous rapporte 2 500 $ !/<#5fd3ff>%player% <#b8c4ce>vient de recevoir 2 500 $ grâce à sa Pomme dorée !; SLOW
     chestplate: AIR
     leatherColor:
       red: 0
@@ -1095,30 +967,21 @@ companions:
       shop:
         type: GOLDEN_APPLE
         amount: 1
-        name: "<gold><b>GOLDEN APPLE</b>"
-        price: 20000
+        name: "<!italic><#5fd3ff><b>Pomme dorée</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>The Apple of wealth."
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO GIVE YOU MONEY"
-          - " <yellow>EVERY 15 MINUTES!"          
-          - " "
-          - "<red>THE WEALTH IS ACCOMPANIED "
-          - "<red> BY SOME WEIGHT."  
-          - ""
-          - "<gray>(<red>!<gray>) As your Companion grows stronger,"
-          - "<gray> your debuff grows stronger too!"          
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>GOLDENAPPLE Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"      
+          - "<!italic><#8fa0ae><i>Le fruit de la fortune.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ 2 500 $ par quart d'heure (chance)"
+          - "<!italic><#ff8a8a>− Ralenti par la richesse"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
 
 
   enderman:
     # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
-    name: "<dark_purple><b>ENDERMAN</b>" 
+    name: "<dark_purple><b>Enderman</b>"
     nameVisible: true    
     sound: BLOCK_METAL_STEP     
     playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjcxNWNhMGY3NDI1NDRhZTNjYTEwNDI5NzU3OGMyZWQ3MDBlYTNhNTQ5ODA0MTM1MTJmNWU3YTBiYzA2NzI5YSJ9fX0="
@@ -1158,17 +1021,13 @@ companions:
       shop:
         type: ENDER_PEARL
         amount: 1
-        name: "<gold><b>ENDERMAN</b>"
-        price: 20000
+        name: "<!italic><#5fd3ff><b>Enderman</b>"
+        price: 0
         description:
-          - " "
-          - "<gray>Can't touch me!"
-          - " "
-          - "<gold>ABILITIES -"
-          - "<yellow>➩ CHANCE TO TOSS AN ENDERPEARL"
-          - " <yellow>AT A RANDOM DISTANCE ON HIT."             
-          - ""
-          - "<gold><b>LEFT CLICK </b><gray>to purchase the <gold>ENDERMAN Companion<gray>!"
-          - " "
-          - "<gold>PRICE: <yellow>$%price%"                   
+          - "<!italic><#8fa0ae><i>Impossible à toucher.</i>"
+          - "<!italic> "
+          - "<!italic><#6ee7b7>+ Perle de l'Ender en combat"
+          - "<!italic> "
+          - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· activer"
+          - "<!italic><#5fd3ff>Clic droit <#8fa0ae>· modifier"
       

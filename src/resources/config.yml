@@ -29,6 +29,8 @@ settings:
   interactCooldown: 3
   # Set how frequent should the plugin save its necessary files.(in minutes)
   saveTime: 60
+  # INUTILISE : le vanish est detecte automatiquement, quel que soit le plugin utilise
+  # (EssentialsX, SuperVanish, PremiumVanish...). Cles conservees car lues au demarrage.
   vanish:
     perms: essentials.vanish
     commands: /v, /vanish
@@ -168,12 +170,12 @@ GUI:
         maxedName: "<!italic><#6ee7b7><b>Capacité au maximum</b>"
         name: "<!italic><#5fd3ff><b>Niveau de capacité</b>"
         slot: 10
-        price: 200000
+        price: 100000
         description:
           - "<!italic><#5fd3ff>Clic gauche <#8fa0ae>· +1 niveau"
           - "<!italic><#ff8a8a>Clic droit <#8fa0ae>· −1 niveau"
           - "<!italic> "
-          - "<!italic><#8fa0ae>Coût <#e3eaf0>200 000 $"
+          - "<!italic><#8fa0ae>Coût <#e3eaf0>100 000 $"
         maxedDescription:
           - "<!italic><#8fa0ae>Niveau maximum atteint."
           - "<!italic> "

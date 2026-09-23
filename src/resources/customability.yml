@@ -1,3 +1,8 @@
+# Reglages des capacites des compagnons.
+#   chance   : probabilite de declenchement, en %
+#   duration : duree de l'effet, en secondes
+#   increaseChanceByLevel : chance ajoutee a chaque niveau d'amelioration
+
 ability:
   fireball:
     chance: 5
@@ -8,13 +13,13 @@ ability:
   mining_vision:
     yLevel: 55
   speed_burst:
-  # Sets how much the duration increases every level in seconds.
+  # Duree gagnee a chaque niveau, en secondes.
     duration: 2
     chance: 5    
   vectorjump:
-    sound: ENTITY_MAGMA_CUBE_JUMP
-    cooldown: 5
-    distanceMultiplier: 2
+    sound: block.note_block.cow_bell
+    cooldown: 7
+    distanceMultiplier: 2.1
   regeneration:
     chance: 10
     duration: 5
@@ -78,10 +83,10 @@ ability:
   hunger:
     chance: 10
     duration: 5   
-  # When upgrading FLING, chance upgrades.
+  # Pour FLING, c'est la chance de declenchement qui augmente avec le niveau.
   fling:
     chance: 10
-    # Set the distance that the enemy will be flung up to.
+    # Distance jusqu'a laquelle l'ennemi est projete.
     distance: 0.8
     increaseChanceByLevel: 5
   command:
